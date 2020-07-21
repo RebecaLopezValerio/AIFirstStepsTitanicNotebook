@@ -409,6 +409,13 @@ graph = Source( tree.export_graphviz(model, out_file=None, feature_names=inputs.
 graph.format = 'png'
 graph.render('model_render',view=True)
 
+#     Feature Importance
+
+importance = b.feature_importances_
+for i,v in enumerate(importance):
+	print('Feature: %0d Score: %.5f' % (i,v), )
+pyplot.bar([x for x in range(len(importance))], importance)
+pyplot.show()
 
 # # Logistic Regression Model (Week 4)
 
