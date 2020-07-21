@@ -411,7 +411,7 @@ graph.render('model_render',view=True)
 
 #     Feature Importance
 
-importance = b.feature_importances_
+importance = model.feature_importances_
 for i,v in enumerate(importance):
 	print('Feature: %0d Score: %.5f' % (i,v), )
 pyplot.bar([x for x in range(len(importance))], importance)
