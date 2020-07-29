@@ -417,6 +417,17 @@ for i,v in enumerate(importance):
 pyplot.bar([x for x in range(len(importance))], importance)
 pyplot.show()
 
+#	Random Forest
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+import sklearn.metrics
+clf = RandomForestClassifier(max_depth=2, random_state=0)
+clf.fit(trainx, trainy)
+forestpredict = clf.predict(testx)
+print(confusion_matrix(testy, forestpredict))
+print(classification_report(testy, forestpredict))
+
 # # Logistic Regression Model (Week 4)
 
 # In[ ]:
