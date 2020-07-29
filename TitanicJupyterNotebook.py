@@ -428,6 +428,22 @@ forestpredict = clf.predict(testx)
 print(confusion_matrix(testy, forestpredict))
 print(classification_report(testy, forestpredict))
 
+# 	Classification Metrics Basics
+
+#	Accuracy, Precision, and Recall:
+#		Accuracy is the basic evaluation metric with the proportion of true results from total results. 
+#		Precision is a narrowed down scope of Accuracy, only involving the proportion of true positive 
+#		from total predicted positives. Recall is slightly different from Precision, instead looking at 
+#		the proportion of true positive from total real positives (True Positives and False Negatives).
+#	F1 Score:
+#		The formula for F1 Score is 2*(precision*recall)/(precision+recall), creating a number between 0 
+#		and 1. You want a high F1 score to show a successful model. In essence, F1 Score requires that a 
+#		model has both good precision and good recall.
+#	ROC AUC:
+#		The ROC curve is a graph of the True Positive Rate on the y-axis and False Positive Rate on the 
+#		x-axis. Ideally, you want the curve to be as close to the top left corner of the graph, meaning 
+#		that your model is  good at distinguishing correct classes.
+
 # # Logistic Regression Model (Week 4)
 
 # In[ ]:
